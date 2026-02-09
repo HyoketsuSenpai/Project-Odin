@@ -1,16 +1,17 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
-import ListAnimals from './Animals';
+import Button from './Button'
 
 function App() {
-  // const animals: Array<string> = ["Lion", "Cow", "Snake", "Lizard"];
+  
+  const handleButtonClick = (url:string) => {
+    window.location.href = url;
+  };
 
   return (
     <div>
-      <h1>Animals: </h1>
-      <ListAnimals />
+      <Button handleClick={() => handleButtonClick("https://www.google.com")}/>
+      <Button text="Don't Click Me!" color="red" />
+      <Button fontSize={20} />
     </div>
   )
 }
